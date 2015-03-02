@@ -21,7 +21,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
+    @user = current_user
+    @question = @user.questions.build(question_params)
     @question.save
     respond_with(@question)
   end

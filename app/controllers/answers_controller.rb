@@ -15,6 +15,7 @@ def destroy
 
 	@question = Question.find(params[:question_id])
 	@answer = @question.answers.find(params[:id]).destroy
+	
 	redirect_to questions_url
 
 end
