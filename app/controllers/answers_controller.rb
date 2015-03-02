@@ -1,4 +1,4 @@
-class AnswersController < Applicationcontroller
+class AnswersController < ApplicationController
 
 def create
 

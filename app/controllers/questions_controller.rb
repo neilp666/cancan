@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    respond_with(@question)
+    authorize! :update, @question
   end
 
   def new
@@ -18,6 +18,7 @@ class QuestionsController < ApplicationController
   end
 
   def edit
+    authorize! :update, @question
   end
 
   def create
